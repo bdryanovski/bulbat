@@ -1,7 +1,20 @@
 {
   "name": "bulbat",
   "version": "0.0.1",
-  "description": "",
+  "description": "In-Memory storage that could be synced to encrypted file",
+  "keywords": ["crypto", "storage", "database", "db", "memory"],
+  "homepage": "https://github.com/bdryanovski/bulbat#README.md",
+  "bugs": {
+    "url": "https://github.com/bdryanovski/bulbat/issues"
+  },
+  "author": {
+    "name": "Bozhidar Dryanovski",
+    "url": "https://github.com/bdryanovski"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bdryanovski/bulbat.git"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -17,7 +30,6 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^24.0.20",
