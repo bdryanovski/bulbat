@@ -1,8 +1,14 @@
 {
   "name": "bulbat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "In-Memory storage that could be synced to encrypted file",
-  "keywords": ["crypto", "storage", "database", "db", "memory"],
+  "keywords": [
+    "crypto",
+    "storage",
+    "database",
+    "db",
+    "memory"
+  ],
   "homepage": "https://github.com/bdryanovski/bulbat#README.md",
   "bugs": {
     "url": "https://github.com/bdryanovski/bulbat/issues"
