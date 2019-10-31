@@ -1,4 +1,4 @@
-{
+module.exports = {
   "roots": ["<rootDir>/src"],
   "transform": {
     "^.+\\.(t|j)s?$": "ts-jest"

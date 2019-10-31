@@ -12,8 +12,9 @@ export class Database {
     this.collectionProps = props || {};
   }
 
-  public add(name: string, props?: CollectionProps): void {
+  public add(name: string, props?: CollectionProps): Collection {
     this.records[name] = new Collection(name, props || this.collectionProps);
+    return this.records[name];
   }
 
   public list(): CollectionList {
@@ -21,7 +22,7 @@ export class Database {
   }
 
   public collection(name: string): Collection {
-    return this.records[name];
+    return this.records[name] === undefined ? this.add(name) : this.records[name];
   }
 
   public dropAll() {

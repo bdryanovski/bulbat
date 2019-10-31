@@ -1,4 +1,4 @@
-## Bulbat
+# Bulbat
 ![bulbat](logo.png)
 
 The name is from [random](https://pokemon.alexonsager.net/1/42) generated Pokémon, between Bulbasaur and Golbat.
@@ -70,6 +70,26 @@ col.data
 // => only posts that are not `deleted`
 ```
 
+Collection require to have `name` as first argument - **this is the minimum requirment**. `CollectionProps`
+could be passed to all collections when using the `Database` and overwrite/extend for each collections from
+the `Collection` constructor or as second argument to `Database#add` method.
+
+```typescript
+const db = Database({ path: `./db` });
+db.add('posts', { path: './posts' });
+```
+
+Encryption, every collection by default will try to store it's state to the disk inside a encrypted file.The file
+is locked with default password of '\<empty-string\>'. You could change this by passing password to all collections
+or per collection - you will need to set `CollectionProps.password`. Created collection could not change there password (for now).
+
+```typescript
+const db = Database({ password: 'not-qwerty' });
+db.add('posts', { password: 'qwerty' }); // will use 'qwerty' for password
+db.add('images'); // will use 'not-qwerty' as password
+```
+
+
 ### Development
 
 ```bash
@@ -99,3 +119,6 @@ npm run test
 # or
 npm run test:watch
 ```
+
+### Changelog
+It's located into the root [CHANGELOG.md](https://github.com/bdryanovski/bulbat/blob/master/CHANGELOG.md) file

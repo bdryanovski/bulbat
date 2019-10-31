@@ -18,8 +18,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest --config jest.config.json",
-    "test:watch": "jest --config jest.config.json --watchAll",
+    "test": "jest --config jest.config.js",
+    "test:watch": "jest --config jest.config.js --watchAll",
     "build": "tsc",
     "develop": "tsc -w",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",

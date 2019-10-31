@@ -48,6 +48,7 @@ export class Collection {
   }
 
   public drop(): void {
+    this.storage = [];
     if (existsSync(this.file)) {
       unlinkSync(this.file);
     }
